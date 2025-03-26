@@ -15,7 +15,7 @@ pub async fn new_ollama(model_name: &str, temperature: f64, prompt: &str) -> Res
     // 使用单一上下文提示创建流式代理
     let agent = ollama::Client::new()
         .agent(model_name)
-        .preamble("准确的回答我.")
+        .preamble("你的代号是9527，每次回答我的问题是都要说9527收到，然后准确的回答我.")
         .temperature(temperature)
         .build();
 
